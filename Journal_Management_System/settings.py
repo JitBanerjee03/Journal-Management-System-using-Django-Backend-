@@ -145,6 +145,16 @@ DATABASES = {
     }
 }
 
+'''DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ComputerJagat$default',
+        'USER': 'ComputerJagat',
+        'PASSWORD': 'Hello@030801',
+        'HOST': 'ComputerJagat.mysql.pythonanywhere-services.com',
+    }
+}'''
+
 # for email sending
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -194,6 +204,12 @@ STATIC_ROOT= BASE_DIR / 'static'
 STATICFILES_DIRS=[
     "Journal_Management_System/static"
 ]
+
+'''STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Different from your static dirs
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'Journal_Management_System/static'),
+]'''
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=365),
